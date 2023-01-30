@@ -1,28 +1,8 @@
-def sumsquare(l):
+def sumsquare(numbers):
+    return [
+        sum(map(lambda x: x**2, [i for i in numbers if i%2==1])),
+        sum(map(lambda x: x**2, [i for i in numbers if i%2==0]))
+    ]
+results = sumsquare([2,4,5,6,7,11,12,13])
+print(results)
 
-   odd=0
-
-   even=0
-
-   for i in l:
-
-       if i%2==0:
-
-           even = even + i**2
-
-       else:
-
-           odd = odd + i**2
-
-   l=[odd,even]
-
-   return(l)
-
-
-s=int(input("enter the terms"))
-l=[]
-for i in range(0,s):
-   o=int(input())
-   l.append(o)
-print(l)
-print(sumsquare(l))
